@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-sm-12">
+    <h3 class="text-center">Composer List</h3>
+    <hr />
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <table class="table table-dark table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Full Name</th>
+          <th scope="col">Genre</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let composer of composers">
+        <tr>
+          <td scope="row">{{ composer.fullName }}</td>
+          <td>{{ composer.genre }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
