@@ -1,0 +1,48 @@
+<!--
+  title: app.component.html
+  author: ngi bujri
+  date: june 2 2023
+ -->
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+    <!-- links -->
+    <li class="nav-item active">
+      <a href="#" class="nav-link">Home</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">About</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">Contact</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- PROFILE -->
+<div role="main" class="container">
+  <h2 class="text-center">{{ assignment }}</h2>
+  <hr />
+  <div class="row" *ngIf="isLoggedIn; else showError">
+    <div class="left-column col-md-4">
+      <!-- profile image -->
+      <app-my-image></app-my-image>
+    </div>
+    <div class="right-column col-md-8">
+      <!-- profile details -->
+      <app-my-details></app-my-details>
+    </div>
+  </div>
+
+  <!-- error message -->
+  <ng-template #showError>
+    <div class="row">
+      <div class="col-sm-12">
+        <h4 class="alert alert-danger">
+          You are not authorized to view this content
+        </h4>
+      </div>
+    </div>
+  </ng-template>
+</div>
