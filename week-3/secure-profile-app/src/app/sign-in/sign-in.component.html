@@ -1,0 +1,35 @@
+<div class="card sign-in-container">
+  <div class="card-body">
+    <h3 class="card-title">Sign In</h3>
+    <form action="" class="card-text">
+      <div class="form-group">
+        <!-- username -->
+        <label for="txtUserName">Username</label>
+        <input
+          type="text"
+          class="form-control"
+          id="txtUsername"
+          placeholder="Enter your username"
+        />
+      </div>
+
+      <!-- password -->
+      <div class="form-group">
+        <label for="txtPassword">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="txtPassword"
+          placeholder="Enter your password"
+        />
+      </div>
+
+      <!-- submit button -->
+      <div class="form-group">
+        <button class="btn btn-primary float-end" (click)="signin()">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
