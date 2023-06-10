@@ -1,0 +1,40 @@
+<!--
+  title: home.component.html
+  author: ngi bujri
+  date: june 10 2023
+  description: home page
+ -->
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+    <!-- links -->
+    <li class="nav-item active">
+      <a routerLink="home" class="nav-link">Home</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">About</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">Contact</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- PROFILE -->
+<div role="main" class="container">
+  <br />
+  <h2 class="text-center">Exercise 3.3 - Passing Data to Routes Part 2</h2>
+  <hr />
+  <br />
+  <div class="row">
+    <div class="left-column col-md-4">
+      <!-- profile image -->
+      <app-my-image></app-my-image>
+    </div>
+    <div class="right-column col-md-8">
+      <!-- profile details -->
+      <app-my-details></app-my-details>
+    </div>
+  </div>
+</div>
