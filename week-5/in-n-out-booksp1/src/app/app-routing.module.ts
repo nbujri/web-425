@@ -13,6 +13,7 @@ import { BookListComponent } from './book-list/book-list.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 
+// component routes
 const routes: Routes = [
   {
     path: '',
