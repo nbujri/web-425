@@ -1,0 +1,44 @@
+/*
+  title: style.scss
+  author: ngi bujri
+  date: june 20 2023
+  description: global styles
+*/
+
+@import "./theme";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.blue {
+  color: #2196f3;
+}
+
+.green {
+  color: #66bb6a;
+}
+
+.attribution-link {
+  text-decoration: none;
+  color: white;
+}
+
+.attribution-link:hover {
+  text-decoration: underline;
+}
+
+.card-title-icon,
+.align-center {
+  text-align: center;
+}
+
+.card-title-icon,
+.mat-icon {
+  font-size: 72px;
+}
