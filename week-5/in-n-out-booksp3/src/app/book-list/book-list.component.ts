@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IBook } from '../book.interface';
 import { BooksService } from '../books.service';
+import { MatDialog } from '@angular/material/dialog';
+import { BookDetailsDialogComponent } from '../book-details-dialog/book-details-dialog.component';
 
 @Component({
   selector: 'app-book-list',
@@ -22,7 +24,7 @@ export class BookListComponent implements OnInit {
   header: Array<string> = ['isbn', 'title', 'numOfPages', 'authors'];
   book: IBook;
 
-  constructor(private bookService: BooksService) {
+  constructor(private bookService: BooksService, private dialog: MatDialog) {
     this.books = this.bookService.getBooks();
   }
 
@@ -31,6 +33,22 @@ export class BookListComponent implements OnInit {
   // logs book properties
   showBookDetails(isbn: string) {
     this.book = this.bookService.getBook(isbn);
-    console.log(this.book);
+
+    const dialogRef = this.dialog
+      .open(BookDetailsDialogComponent, {
+        data: {
+          book: this.book,
+        },
+        disableClose: true,
+        width: '800px',
+      })
+      .afterClosed()
+      .subscribe((result) => {
+        if (result === 'confirm') {
+          this.book = null;
+        }
+      });
+
+    // console.log(this.book);
   }
 }
