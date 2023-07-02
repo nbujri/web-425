@@ -1,0 +1,23 @@
+<!--
+  title: wishlist-create.component.html
+  author: ngi bujri
+  date: july 2 2023
+  description: create wishlist item form
+-->
+
+<form fxLayout="column" class="wishlist-create-form">
+  <!-- book title -->
+  <mat-form-field fxFlex appearance="fill">
+    <mat-label>Title</mat-label>
+    <input type="text" name="title" matInput [(ngModel)]="item.title" />
+  </mat-form-field>
+
+  <!-- book authors -->
+  <mat-form-field flFlex appearance="fill">
+    <mat-label>Authors</mat-label>
+    <input type="text" name="authors" matInput [(ngModel)]="item.authors" />
+  </mat-form-field>
+
+  <!-- submission -->
+  <button mat-button color="primary" (click)="addItem()">Add Item</button>
+</form>
