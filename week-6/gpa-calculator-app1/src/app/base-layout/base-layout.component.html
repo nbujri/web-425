@@ -1,0 +1,39 @@
+<!--
+  title: base-layout.component.html
+  author: ngi bujri
+  date: july 2 2023
+-->
+
+<!-- navigation -->
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <!-- logo -->
+    <div class="logo">
+      <img src="../../assets/gpa-calculator-app.png" alt="" height="80" />
+    </div>
+
+    <div style="width: 80%">
+      <div fxLayout="row wrap" fxLayoutALign="end start">
+        <button mat-button routerLink="/">Home</button>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<br />
+
+<div fxLayout="row wrap">
+  <div fxFlex>
+    <mat-card class="main-container">
+      <mat-card-title>{{ assignment }}</mat-card-title>
+
+      <br />
+      <br />
+
+      <!-- main content -->
+      <mat-card-content>
+        <router-outlet></router-outlet>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
