@@ -1,0 +1,17 @@
+/*
+  title: base-layout.component.css
+  author: ngi bujri
+  date: july 2 2023
+  description: base-layout styles
+*/
+
+.logo {
+  margin-top: 5px;
+}
+
+.main-container {
+  padding-top: 25px;
+  width: 80%;
+  /* center container */
+  margin: 0 auto;
+}
