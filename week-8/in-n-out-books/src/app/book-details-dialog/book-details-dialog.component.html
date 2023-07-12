@@ -1,0 +1,25 @@
+<!--
+  title: book-details-dialog.component.html
+  author: ngi bujri
+  date: june 24 2023
+  description: dialog popup
+-->
+
+<mat-card>
+  <!-- book details -->
+  <mat-card-title class="blue">{{ book.title }}</mat-card-title>
+  <mat-card-content>
+    <div fxLayOut="column">
+      <p>ISBN: {{ book.isbn }}</p>
+      <p>Authors: {{ book.authors.join(", ") }}</p>
+      <p>Pages: {{ book.numOfPages }}</p>
+      <p>Description: {{ book.description }}</p>
+    </div>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <!-- close dialog -->
+    <button mat-raised-button color="accent" matDialogClose="confirm">
+      OK
+    </button>
+  </mat-card-actions>
+</mat-card>

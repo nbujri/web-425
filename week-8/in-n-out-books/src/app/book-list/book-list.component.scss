@@ -1,0 +1,36 @@
+/**
+ * title: book-list.component.scss
+ * author: ngi bujri
+ * date: june 23 2023
+ * description: book-list styles
+ */
+
+.a-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.a-link:hover {
+  text-decoration: underline;
+}
+
+.grid-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto auto auto;
+  padding: 25px;
+}
+
+.grid-container__item {
+  padding: 20px;
+  font-size: 30px;
+}
+
+.grid-container__ahref {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.grid-container__ahref:hover {
+  text-decoration: underline;
+}
